@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS `user_repo` (
 CREATE TABLE IF NOT EXISTS `repo_star` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
   `user_id` INT(11) NOT NULL COMMENT '用户id',
-  `repo_id` INT(11) NOT NULL COMMENT '关注的用户id',
+  `repo_id` INT(11) NOT NULL COMMENT '仓库id',
   `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   UNIQUE KEY `star_unique` (`user_id`,`repo_id`)
@@ -46,7 +46,7 @@ CREATE TABLE IF NOT EXISTS `repo_star` (
 CREATE TABLE IF NOT EXISTS `repo_fork` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
   `user_id` INT(11) NOT NULL COMMENT '用户id',
-  `repo_id` INT(11) NOT NULL COMMENT '关注的用户id',
+  `repo_id` INT(11) NOT NULL COMMENT '仓库id',
   `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   UNIQUE KEY `fork_unique` (`user_id`,`repo_id`)
